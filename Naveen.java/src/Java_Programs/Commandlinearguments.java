@@ -1,0 +1,24 @@
+package Java_Programs;
+
+public class Commandlinearguments {
+	
+	public static void main(String[] args)
+	{
+		//check 2 numbers are given 
+		if(args.length<2)
+		{
+			System.out.println("Please provide 2 Numbers.");
+			return;
+		}
+		
+		try {
+			int a = Integer.parseInt(args[0]);
+			int b = Integer.parseInt(args[1]);
+			System.out.println("Sum : "+ (a+b));
+		}
+		catch (NumberFormatException e) {
+			System.out.println("Invalid Integer input : " + e.getMessage());
+		}
+	}
+
+}
